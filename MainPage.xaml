@@ -1,0 +1,61 @@
+<Page
+    x:Class="Selectivitapp.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Selectivitapp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:winui="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    winui:BackdropMaterial.ApplyToRootOrPageBackground="True"
+    >
+    <ScrollViewer IsVerticalScrollChainingEnabled="True" IsHorizontalScrollChainingEnabled="False" HorizontalAlignment="Stretch">
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Stretch" Margin="20,20,20,20" MaxWidth="700">
+
+                <TextBlock FontSize="40" FontWeight="SemiBold" Margin="0,20,0,10" HorizontalAlignment="Left">Matèries Comunes</TextBlock>
+                <local:SectionButton Code="llca" Text="Català" Icon="ms-appx:///Assets/a.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="lles" Text="Castellà" Icon="ms-appx:///Assets/y.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="hist" Text="Història d'Espanya" Icon="ms-appx:///Assets/history.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="hfil" Text="Història de la Filosofia" Icon="ms-appx:///Assets/scroll.png" HorizontalAlignment="Stretch"/>
+
+
+                <TextBlock FontSize="20" FontWeight="SemiBold" Margin="0,20,0,10" HorizontalAlignment="Left">Llengües:</TextBlock>
+                <local:SectionButton Code="angl" Text="Anglès" Icon="ms-appx:///Assets/bus.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="fran" Text="Francès" Icon="ms-appx:///Assets/eiffel.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="alem" Text="Alemany" Icon="ms-appx:///Assets/germany.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="ital" Text="Italià" Icon="ms-appx:///Assets/pisa.png" HorizontalAlignment="Stretch"/>
+
+                <TextBlock FontSize="40" FontWeight="SemiBold" Margin="0,20,0,10" HorizontalAlignment="Left">Batxillerat de Ciències i Tecnologia:</TextBlock>
+                <local:SectionButton Code="biol" Text="Biologia" Icon="ms-appx:///Assets/cell.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="dibu" Text="Dibuix Tècnic" Icon="ms-appx:///Assets/tecnic.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="cite" Text="Ciències de la Terra i del Medi Ambient" Icon="ms-appx:///Assets/volcano.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="elec" Text="Electrotècnia" Icon="ms-appx:///Assets/resistor.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="fisi" Text="Física" Icon="ms-appx:///Assets/physics.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="mate" Text="Matemàtiques" Icon="ms-appx:///Assets/sigma.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="tecn" Text="Tecnologia Industrial" Icon="ms-appx:///Assets/crane.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="quim" Text="Química" Icon="ms-appx:///Assets/chem.png" HorizontalAlignment="Stretch"/>
+
+
+                <TextBlock FontSize="40" FontWeight="SemiBold" Margin="0,20,0,10" HorizontalAlignment="Left">Batxillerat Social i d'Humanitats:</TextBlock>
+                <local:SectionButton Code="macs" Text="Matemàtiques aplicades a les Ciències Socials" Icon="ms-appx:///Assets/graph.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="ecem" Text="Economia de l'Empresa" Icon="ms-appx:///Assets/sales.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="geog" Text="Geografia" Icon="ms-appx:///Assets/geography.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="hart" Text="Història de l'Art" Icon="ms-appx:///Assets/bust.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="llat" Text="Llatí" Icon="ms-appx:///Assets/latin.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="grec" Text="Grec" Icon="ms-appx:///Assets/greek.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="lica" Text="Literatura Catalana" Icon="ms-appx:///Assets/book.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="lies" Text="Literatura Castellana" Icon="ms-appx:///Assets/book2.png" HorizontalAlignment="Stretch"/>
+                
+
+                <TextBlock FontSize="40" FontWeight="SemiBold" Margin="0,20,0,10" HorizontalAlignment="Left">Batxillerat Artístic:</TextBlock>
+                <local:SectionButton Code="fart" Text="Fonaments de les arts" Icon="ms-appx:///Assets/arts.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="amus" Text="Anàlisi Musical" Icon="ms-appx:///Assets/music.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="diss" Text="Disseny" Icon="ms-appx:///Assets/design.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="cuau" Text="Cultura Audiovisual" Icon="ms-appx:///Assets/audiovisual.png" HorizontalAlignment="Stretch"/>
+                <local:SectionButton Code="diar" Text="Dibuix Artístic" Icon="ms-appx:///Assets/palette.png" HorizontalAlignment="Stretch"/>
+
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
