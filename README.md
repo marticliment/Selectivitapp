@@ -8,7 +8,7 @@ Study for the Selectivitat Exams (only in Catalonia) with the question papers an
  - Built on a modern, fast, responsive UWP app
  - <b>Available only in catalan</b>.
 ## Screenshots
-![image](https://github.com/marticliment/SelectivitApp/assets/53119851/d7503ba7-5397-4826-bf34-a59d41d6d06e)
+![image](https://github.com/marticliment/Selectivitapp/assets/53119851/96cd981b-cf56-4647-bc4a-0ef0b51db802)
 ![image](https://github.com/marticliment/SelectivitApp/assets/53119851/2c1fc459-2872-4c0d-9b74-5309368a7206)
 ![image](https://github.com/marticliment/SelectivitApp/assets/53119851/36c52595-d382-44da-ab37-f879469024d5)
 ![image](https://github.com/marticliment/SelectivitApp/assets/53119851/067ec887-6d26-4134-9ffb-ca7cb7709335)
