@@ -81,7 +81,7 @@ namespace Selectivitapp.Assets
             {
                 answersLetter = "p";
             }
-            string BaseString = "https://www.selecat.cat/pau/pau_" + ((App)Application.Current).codi + year[year.Length - 2] + year[year.Length - 1] + monthLetter + answersLetter + ".pdf";
+            string BaseString = "http://marticliment.com/selectivitapp/pau_" + ((App)Application.Current).codi + year[year.Length - 2] + year[year.Length - 1] + monthLetter + answersLetter + ".pdf";
             Debug.WriteLine(BaseString);
             return BaseString;
         }
