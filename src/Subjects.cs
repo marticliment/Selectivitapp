@@ -11,7 +11,7 @@ namespace src
         public string Name { get; init; }
         public string Code { get; init; }
         public string IconPath { get; init; }
-        public int MaxYear = 2022;
+        public int MaxYear = 2024;
         public int MinYear = 2000;
     }
 

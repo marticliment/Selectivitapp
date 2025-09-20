@@ -90,7 +90,7 @@ namespace Selectivitapp.Assets
             string monthLetter = (month == "Setembre")? "s": "j";
             string answersLetter = answers? "p": "l";
             
-            string BaseString = $"http://marticliment.com/selectivitapp/pau_{subject.Code}{year%100}{monthLetter}{answersLetter}.pdf";
+            string BaseString = $"https://raw.githubusercontent.com/marticliment/Selectivitapp/refs/heads/main/examens/pau_{subject.Code}{year%100}{monthLetter}{answersLetter}.pdf";
             Debug.WriteLine(BaseString);
             return BaseString;
         }
