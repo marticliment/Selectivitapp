@@ -5,7 +5,7 @@ Study for the Selectivitat Exams (only in Catalonia) with the question papers an
  - See the question paper only, the answers or view them both side by side
  - Switch between years and between june or september versions easily
  - Change courses easily
- - Built on a modern, fast, responsive UWP app
+ - Built on a modern, fast, responsive WinUI3 app
  - <b>Available only in catalan</b>.
 ## Screenshots
 <img width="1129" height="660" alt="image" src="https://github.com/user-attachments/assets/40c0a5aa-9418-4617-89f4-6e2ddab39339" />
