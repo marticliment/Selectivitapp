@@ -11,7 +11,7 @@
 
     <Page.Resources>
         <DataTemplate x:Key="SubjectItem" x:DataType="src:Subject">
-            <Button Tag="{x:Bind Code}">
+            <Button Click="Button_Click" Tag="{x:Bind Code}">
                 <Grid Width="120" Height="100">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*" />

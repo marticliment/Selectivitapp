@@ -32,5 +32,11 @@ namespace src
             SocialSubjects.ItemsSource = Subjects.Social;
             ArtisticSubjects.ItemsSource = Subjects.Artistic;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ((App)Application.Current)?._window?.NavigateToTag(((sender as Button)?.Tag as string) ?? "");
+
+        }
     }
 }
