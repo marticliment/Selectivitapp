@@ -87,6 +87,7 @@ namespace src
         public void NavigateToTag(string tag)
         {
             NavigationFrame.Navigate(typeof(Viewer), tag);
+            NavigationView.IsPaneOpen = false;
         }
     }
 }
