@@ -1,4 +1,4 @@
-﻿using Selectivitapp.Assets;
+﻿using Selectivitapp;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,13 +8,16 @@ using Windows.ApplicationModel;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Core;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using Microsoft.UI.Xaml;
+using Microsoft.UI.Xaml.Controls;
+using Microsoft.UI.Xaml.Controls.Primitives;
+using Microsoft.UI.Xaml.Data;
+using Microsoft.UI.Xaml.Input;
+using Microsoft.UI.Xaml.Media;
+using Microsoft.UI.Xaml.Navigation;
+using src;
+using Windows.Web.Http.Headers;
+using Selectivitapp.Assets;
 
 // The User Control item template is documented at https://go.microsoft.com/fwlink/?LinkId=234236
 
@@ -72,11 +75,12 @@ namespace Selectivitapp
             ContentIcon.UriSource = new Uri(GetValue(IconProperty).ToString());
         }
 
+        public static string Codi { get; private set; } = "";
+        public static string Nom { get; private set; } = "";
+
         private void click(object sender, RoutedEventArgs e)
         {
-            ((App)Application.Current).codi = GetValue(CodeProperty).ToString();
-            ((App)Application.Current).nom = TextBlock.Text;
-            ((App)Application.Current).navigationFrame.Navigate(typeof(Viewer));
+            ((App)Application.Current)?._window?.NavigateToTag(GetValue(CodeProperty)?.ToString() ?? "");
         }
 
     }

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page
+    x:Class="src.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:Selectivitapp"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer
+        HorizontalAlignment="Stretch"
+        IsHorizontalScrollChainingEnabled="False"
+        IsVerticalScrollChainingEnabled="True">
+        <NavigationView
+            x:Name="nvSample"
+            IsBackButtonVisible="Collapsed"
+            IsPaneOpen="False"
+            IsPaneVisible="False"
+            IsSettingsVisible="False">
+            <NavigationView.MenuItems>
+                <NavigationViewItem
+                    Content="Assignatures"
+                    Icon="list"
+                    Tag="SamplePage1" />
+                <NavigationViewItem
+                    Content="Menu Item2"
+                    Icon="Save"
+                    Tag="SamplePage2" />
+            </NavigationView.MenuItems>
+            <StackPanel HorizontalAlignment="Stretch" Orientation="Vertical">
+                <Pivot
+                    Title=""
+                    MaxWidth="1100"
+                    HorizontalAlignment="Center">
+                    <PivotItem Header="Matèries Comunes">
+                        <StackPanel
+                            MaxWidth="700"
+                            Margin="20,20,20,20"
+                            HorizontalAlignment="Stretch"
+                            Orientation="Vertical">
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="llca"
+                                Icon="ms-appx:///Assets/a.png"
+                                Text="Català" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="lles"
+                                Icon="ms-appx:///Assets/y.png"
+                                Text="Castellà" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="hist"
+                                Icon="ms-appx:///Assets/history.png"
+                                Text="Història d'Espanya" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="hfil"
+                                Icon="ms-appx:///Assets/scroll.png"
+                                Text="Història de la Filosofia" />
+                            <TextBlock
+                                Margin="0,20,0,10"
+                                HorizontalAlignment="Left"
+                                FontSize="20"
+                                FontWeight="SemiLight">
+                                Llengües:
+                            </TextBlock>
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="angl"
+                                Icon="ms-appx:///Assets/bus.png"
+                                Text="Anglès" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="fran"
+                                Icon="ms-appx:///Assets/eiffel.png"
+                                Text="Francès" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="alem"
+                                Icon="ms-appx:///Assets/germany.png"
+                                Text="Alemany" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="ital"
+                                Icon="ms-appx:///Assets/pisa.png"
+                                Text="Italià" />
+                        </StackPanel>
+                    </PivotItem>
+                    <PivotItem Header="Ciències i Tecnologia">
+                        <StackPanel
+                            MaxWidth="700"
+                            Margin="20,20,20,20"
+                            HorizontalAlignment="Stretch"
+                            Orientation="Vertical">
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="biol"
+                                Icon="ms-appx:///Assets/cell.png"
+                                Text="Biologia" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="dibu"
+                                Icon="ms-appx:///Assets/tecnic.png"
+                                Text="Dibuix Tècnic" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="cite"
+                                Icon="ms-appx:///Assets/volcano.png"
+                                Text="Ciències de la Terra i del Medi Ambient" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="elec"
+                                Icon="ms-appx:///Assets/resistor.png"
+                                Text="Electrotècnia" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="fisi"
+                                Icon="ms-appx:///Assets/physics.png"
+                                Text="Física" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="mate"
+                                Icon="ms-appx:///Assets/sigma.png"
+                                Text="Matemàtiques" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="tecn"
+                                Icon="ms-appx:///Assets/crane.png"
+                                Text="Tecnologia Industrial" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="quim"
+                                Icon="ms-appx:///Assets/chem.png"
+                                Text="Química" />
+                        </StackPanel>
+                    </PivotItem>
+                    <PivotItem Header="Humanitats i Ciències Socials">
+                        <StackPanel
+                            MaxWidth="700"
+                            Margin="20,20,20,20"
+                            HorizontalAlignment="Stretch"
+                            Orientation="Vertical">
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="macs"
+                                Icon="ms-appx:///Assets/graph.png"
+                                Text="Matemàtiques aplicades a les Ciències Socials" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="ecem"
+                                Icon="ms-appx:///Assets/sales.png"
+                                Text="Economia de l'Empresa" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="geog"
+                                Icon="ms-appx:///Assets/geography.png"
+                                Text="Geografia" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="hart"
+                                Icon="ms-appx:///Assets/bust.png"
+                                Text="Història de l'Art" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="llat"
+                                Icon="ms-appx:///Assets/latin.png"
+                                Text="Llatí" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="grec"
+                                Icon="ms-appx:///Assets/greek.png"
+                                Text="Grec" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="lica"
+                                Icon="ms-appx:///Assets/book.png"
+                                Text="Literatura Catalana" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="lies"
+                                Icon="ms-appx:///Assets/book2.png"
+                                Text="Literatura Castellana" />
+                        </StackPanel>
+                    </PivotItem>
+                    <PivotItem Header="Arts plàstiques i Escèniques">
+                        <StackPanel
+                            MaxWidth="700"
+                            Margin="20,20,20,20"
+                            HorizontalAlignment="Stretch"
+                            Orientation="Vertical">
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="fart"
+                                Icon="ms-appx:///Assets/arts.png"
+                                Text="Fonaments de les arts" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="amus"
+                                Icon="ms-appx:///Assets/music.png"
+                                Text="Anàlisi Musical" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="diss"
+                                Icon="ms-appx:///Assets/design.png"
+                                Text="Disseny" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="cuau"
+                                Icon="ms-appx:///Assets/audiovisual.png"
+                                Text="Cultura Audiovisual" />
+                            <local:SectionButton
+                                HorizontalAlignment="Stretch"
+                                Code="diar"
+                                Icon="ms-appx:///Assets/palette.png"
+                                Text="Dibuix Artístic" />
+                        </StackPanel>
+                    </PivotItem>
+                </Pivot>
+            </StackPanel>
+        </NavigationView>
+    </ScrollViewer>
+</Page>
