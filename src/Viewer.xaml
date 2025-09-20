@@ -32,7 +32,7 @@
             </Grid.RowDefinitions>
             <TextBlock
                 Name="PDFTitle"
-                Margin="0"
+                Padding="10"
                 VerticalAlignment="Center" />
             <ComboBox
                 Name="Answers"

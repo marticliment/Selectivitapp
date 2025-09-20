@@ -71,7 +71,6 @@ namespace Selectivitapp.Assets
             pgsBar.Visibility = Visibility.Visible;
             ViewEnunciats.Source = new Uri(getURL(false));
             ViewSolucions.Source = new Uri(getURL(true));
-            PDFTitle.Text = SectionButton.Nom;
             ViewEnunciats.NavigationCompleted += WebView_Loaded;
             ViewSolucions.NavigationCompleted += WebView_Loaded;
         }
@@ -90,7 +89,7 @@ namespace Selectivitapp.Assets
             string monthLetter = (month == "Setembre")? "s": "j";
             string answersLetter = answers? "p": "l";
             
-            string BaseString = $"https://raw.githubusercontent.com/marticliment/Selectivitapp/refs/heads/main/examens/pau_{subject.Code}{year%100}{monthLetter}{answersLetter}.pdf";
+            string BaseString = $"https://cdn.jsdelivr.net/gh/marticliment/Selectivitapp@main/docs/pau_{subject.Code}{year%100}{monthLetter}{answersLetter}.pdf";
             Debug.WriteLine(BaseString);
             return BaseString;
         }

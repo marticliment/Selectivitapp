@@ -37,7 +37,8 @@ namespace src
             new Subject(){
                 Code="hfil",
                 IconPath="ms-appx:///Assets/scroll.png",
-                Name="Història de la Filosofia"
+                Name="Història de la Filosofia",
+                MinYear=2010
             }
         };
 
@@ -81,7 +82,8 @@ namespace src
             new Subject() {                                
                 Code="cite",
                 IconPath="ms-appx:///Assets/volcano.png",
-                Name="Ciències de la Terra i del Medi Ambient" 
+                Name="Ciències de la Terra i del Medi Ambient",
+                MinYear=2003
             },
             new Subject() {                                
                 Code="elec",
@@ -125,12 +127,14 @@ namespace src
             new Subject() {                                
                 Code="geog",
                 IconPath="ms-appx:///Assets/geography.png",
-                Name="Geografia" 
+                Name="Geografia",
+                MinYear=2006
             },
             new Subject() {                                
                 Code="hart",
                 IconPath="ms-appx:///Assets/bust.png",
-                Name="Història de l'Art" 
+                Name="Història de l'Art",
+                MinYear=2010
             },
             new Subject() {                                
                 Code="llat",
@@ -159,12 +163,14 @@ namespace src
             new Subject() {                                
                 Code="fart",
                 IconPath="ms-appx:///Assets/arts.png",
-                Name="Fonaments de les arts" 
+                Name="Fonaments de les arts",
+                MinYear=2018
             },
             new Subject() {                                
                 Code="amus",
                 IconPath="ms-appx:///Assets/music.png",
-                Name="Anàlisi Musical" 
+                Name="Anàlisi Musical",
+                MinYear=2010
             },
             new Subject() {                                
                 Code="diss",
@@ -174,7 +180,8 @@ namespace src
             new Subject() {                                
                 Code="cuau",
                 IconPath="ms-appx:///Assets/audiovisual.png",
-                Name="Cultura Audiovisual" 
+                Name="Cultura Audiovisual",
+                MinYear=2010
             },
             new Subject() {                                
                 Code="diar",
