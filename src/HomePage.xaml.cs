@@ -26,6 +26,11 @@ namespace src
         public HomePage()
         {
             InitializeComponent();
+            CommonSubjects.ItemsSource = Subjects.General;
+            LanguageSubjects.ItemsSource = Subjects.Languages;
+            ScienceSubjects.ItemsSource = Subjects.Science;
+            SocialSubjects.ItemsSource = Subjects.Social;
+            ArtisticSubjects.ItemsSource = Subjects.Artistic;
         }
     }
 }

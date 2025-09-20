@@ -115,7 +115,7 @@ namespace src
             new Subject() {                                
                 Code="macs",
                 IconPath="ms-appx:///Assets/graph.png",
-                Name="Matemàtiques aplicades a les Ciències Socials" 
+                Name="Matemàtiques CC.SS." 
             },
             new Subject() {                                
                 Code="ecem",
