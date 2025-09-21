@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 18
 VisualStudioVersion = 18.0.11012.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "src", "src\src.csproj", "{B3C783AA-0D8B-48E8-A21C-8A6847C0A036}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Selectivitapp", "src\Selectivitapp.csproj", "{B3C783AA-0D8B-48E8-A21C-8A6847C0A036}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

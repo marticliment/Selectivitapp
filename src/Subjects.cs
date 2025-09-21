@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.UI.Xaml.Controls;
 
-namespace src
+namespace Selectivitapp
 {
     public class Subject
     {

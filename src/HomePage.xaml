@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Page
-    x:Class="src.HomePage"
+    x:Class="Selectivitapp.HomePage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="using:Selectivitapp"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:src="using:src"
     mc:Ignorable="d">
 
     <Page.Resources>
-        <DataTemplate x:Key="SubjectItem" x:DataType="src:Subject">
+        <DataTemplate x:Key="SubjectItem" x:DataType="local:Subject">
             <Button Click="Button_Click" Tag="{x:Bind Code}">
                 <Grid Width="120" Height="100">
                     <Grid.RowDefinitions>
