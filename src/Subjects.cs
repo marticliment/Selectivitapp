@@ -83,12 +83,14 @@ namespace Selectivitapp
                 Code="cite",
                 IconPath="ms-appx:///Assets/volcano.png",
                 Name="Ciències de la Terra i del Medi Ambient",
-                MinYear=2003
+                MinYear=2003,
+                MaxYear=2023,
             },
             new Subject() {                                
                 Code="elec",
                 IconPath="ms-appx:///Assets/resistor.png",
-                Name="Electrotècnia" 
+                Name="Electrotècnia",
+                MaxYear=2023
             },
             new Subject() {                                
                 Code="fisi",
@@ -122,7 +124,8 @@ namespace Selectivitapp
             new Subject() {                                
                 Code="ecem",
                 IconPath="ms-appx:///Assets/sales.png",
-                Name="Economia de l'Empresa" 
+                Name="Economia de l'Empresa",
+                MaxYear=2023
             },
             new Subject() {                                
                 Code="geog",
@@ -160,33 +163,34 @@ namespace Selectivitapp
 
         public static IReadOnlyList<Subject> Artistic = new List<Subject>()
         {
-            new Subject() {                                
+            new Subject() {
                 Code="fart",
                 IconPath="ms-appx:///Assets/arts.png",
                 Name="Fonaments de les arts",
                 MinYear=2018
             },
-            new Subject() {                                
+            new Subject() {
                 Code="amus",
                 IconPath="ms-appx:///Assets/music.png",
                 Name="Anàlisi Musical",
                 MinYear=2010
             },
-            new Subject() {                                
+            new Subject() {
                 Code="diss",
                 IconPath="ms-appx:///Assets/design.png",
-                Name="Disseny" 
+                Name="Disseny"
             },
-            new Subject() {                                
+            new Subject() {
                 Code="cuau",
                 IconPath="ms-appx:///Assets/audiovisual.png",
                 Name="Cultura Audiovisual",
-                MinYear=2010
+                MinYear=2010,
+                MaxYear=2023
             },
-            new Subject() {                                
+            new Subject() {
                 Code="diar",
                 IconPath="ms-appx:///Assets/palette.png",
-                Name="Dibuix Artístic" 
+                Name="Dibuix Artístic"
             },
         };
 
