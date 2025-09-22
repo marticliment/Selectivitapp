@@ -26,6 +26,8 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="120" />
                 <ColumnDefinition Width="120" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
@@ -55,28 +57,37 @@
                 <x:String>Juny</x:String>
                 <x:String>Setembre</x:String>
             </ComboBox>
-            <NumberBox
+            <ComboBox
                 Name="YearSelector"
                 Grid.Column="3"
                 Width="120"
                 VerticalAlignment="Center"
-                LargeChange="1"
-                Maximum="2024"
-                Minimum="2000"
-                SmallChange="1"
-                SpinButtonPlacementMode="Compact"
-                ValueChanged="YearSelector_ValueChanged"
-                Value="2024" />
+                CornerRadius="4,0,0,4"
+                SelectionChanged="YearSelector_ValueChanged" />
+            <Button
+                x:Name="YearUp"
+                Grid.Column="4"
+                Width="32"
+                Height="32"
+                Margin="-8,0,0,0"
+                Padding="0"
+                BorderThickness="0,1"
+                Click="YearUp_Click"
+                CornerRadius="0">
+                <FontIcon FontSize="12" Glyph="&#xE948;" />
+            </Button>
+            <Button
+                x:Name="YearDown"
+                Grid.Column="5"
+                Width="32"
+                Height="32"
+                Margin="-8,0,0,0"
+                Padding="0"
+                Click="YearDown_Click"
+                CornerRadius="0,4,4,0">
+                <FontIcon FontSize="12" Glyph="&#xE949;" />
+            </Button>
         </Grid>
-        <winui:ProgressBar
-            Name="pgsBar"
-            Grid.Row="0"
-            Grid.Column="0"
-            Grid.ColumnSpan="8"
-            VerticalAlignment="Bottom"
-            CornerRadius="0,0,0,0"
-            IsIndeterminate="True"
-            Visibility="Visible" />
         <Grid
             Grid.Row="1"
             HorizontalAlignment="Stretch"
@@ -89,7 +100,7 @@
                 Name="LeftBorder"
                 Grid.Column="0"
                 Margin="10,0,10,10"
-                CornerRadius="8,8,8,8">
+                CornerRadius="8">
                 <winui:WebView2
                     Name="ViewEnunciats"
                     Grid.Column="0"
@@ -101,13 +112,30 @@
                 Name="RightBorder"
                 Grid.Column="1"
                 Margin="10,0,10,10"
-                CornerRadius="8,8,8,8">
+                CornerRadius="8">
                 <winui:WebView2
                     Name="ViewSolucions"
                     Grid.Column="1"
                     HorizontalAlignment="Stretch"
                     VerticalAlignment="Stretch"
                     Source="https://www.selecat.cat/pau/pau_llca21jp.pdf" />
+            </Border>
+            <Border
+                Name="pgsBar"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Width="80"
+                Height="80"
+                VerticalAlignment="Center"
+                Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+                CornerRadius="40"
+                Visibility="Visible">
+                <ProgressRing
+                    Width="64"
+                    Height="64"
+                    CornerRadius="0,0,0,0"
+                    IsIndeterminate="True" />
             </Border>
         </Grid>
     </Grid>

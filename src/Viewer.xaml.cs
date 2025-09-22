@@ -16,6 +16,8 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Windows.Devices.AllJoyn;
+using System.Threading.Tasks;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -47,9 +49,12 @@ namespace Selectivitapp
 
             if (subject is null) return;
             PDFTitle.Text = subject.Name ?? "";
-            YearSelector.Maximum = subject.MaxYear;
-            YearSelector.Value = subject.MaxYear;
-            YearSelector.Minimum = subject.MinYear ;
+            
+            YearSelector.SelectionChanged += YearSelector_ValueChanged;
+            for(int y = subject.MaxYear; y >= subject.MinYear; y--)
+                YearSelector.Items.Add(y);
+            YearSelector.SelectedIndex = 0;
+
             loadPDF();
             base.OnNavigatedTo(e);
         }
@@ -65,30 +70,52 @@ namespace Selectivitapp
             {
                 await ViewEnunciats.EnsureCoreWebView2Async();
                 await ViewSolucions.EnsureCoreWebView2Async();
+                ViewEnunciats.NavigationCompleted += WebView_Loaded;
+                ViewSolucions.NavigationCompleted += WebView_Loaded;
                 wbloaded = true;
             }
             pgsBar.Visibility = Visibility.Visible;
             ViewEnunciats.Source = new Uri(getURL(false));
             ViewSolucions.Source = new Uri(getURL(true));
-            ViewEnunciats.NavigationCompleted += WebView_Loaded;
-            ViewSolucions.NavigationCompleted += WebView_Loaded;
         }
 
-        private void WebView_Loaded(object sender, CoreWebView2NavigationCompletedEventArgs e)
+        private bool showingErrorDialog;
+        private async void WebView_Loaded(object sender, CoreWebView2NavigationCompletedEventArgs e)
         {
+            if (e.HttpStatusCode is 0 && e.WebErrorStatus is CoreWebView2WebErrorStatus.ConnectionAborted) 
+                 return; // Not loaded yet
+
+            await Task.Delay(250);
             pgsBar.Visibility = Visibility.Collapsed;
+            if(e.HttpStatusCode is not 200)
+            {
+                if (showingErrorDialog) return;
+                showingErrorDialog = true;
+                var dialog = new ContentDialog
+                {
+                    Title = "No s'ha pogut carregar el document.",
+                    Content = $"No s'ha pogut carregar l'examen sol·licitat. ({e.WebErrorStatus}, Codi {e.HttpStatusCode}). Comproveu la connexió a internet o torneu a intentar-ho més tard.",
+                    CloseButtonText = "Tanca",
+                    XamlRoot = this.XamlRoot
+                };
+                await dialog.ShowAsync();
+                showingErrorDialog = false;
+            }
         }
 
         string getURL(bool answers)
         {
             if (subject is null) return "about:blank";
-            if (year == 0) year = 2024;
+            if (year is 0) year = subject.MaxYear;
+            else if (year < subject.MinYear) year = subject.MinYear;
+            else if (year > subject.MaxYear) year = subject.MaxYear ;
             if (month == "") month = "Juny";
             
             string monthLetter = (month == "Setembre")? "s": "j";
             string answersLetter = answers? "p": "l";
-            
-            string BaseString = $"https://marticliment.com/selectivitapp/?pdf=pau_{subject.Code}{year%100}{monthLetter}{answersLetter}.pdf";
+
+            //string BaseString = $"https://marticliment.com/selectivitapp/?pdf=pau_{subject.Code}{year.ToString()[^2..]}{monthLetter}{answersLetter}.pdf";
+            string BaseString = $"https://marticliment.com/selectivitapp/pau_{subject.Code}{year.ToString()[^2..]}{monthLetter}{answersLetter}.pdf";
             Debug.WriteLine(BaseString);
             return BaseString;
         }
@@ -129,10 +156,22 @@ namespace Selectivitapp
             loadPDF();
         }
 
-        private void YearSelector_ValueChanged(NumberBox sender, NumberBoxValueChangedEventArgs args)
+        private void YearSelector_ValueChanged(object sender, SelectionChangedEventArgs args)
         {
-            year = (int)YearSelector.Value;
+            year = (int)YearSelector.SelectedValue;
             loadPDF();
+        }
+
+        private void YearDown_Click(object sender, RoutedEventArgs e)
+        {
+            if (YearSelector.SelectedIndex < YearSelector.Items.Count-1) 
+                YearSelector.SelectedIndex++;
+        }
+
+        private void YearUp_Click(object sender, RoutedEventArgs e)
+        {
+            if (YearSelector.SelectedIndex > 0)
+                YearSelector.SelectedIndex--;
         }
     }
 }
