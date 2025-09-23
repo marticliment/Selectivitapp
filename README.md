@@ -1,6 +1,9 @@
 # SelectivitApp
 Study for the Selectivitat Exams (only in Catalonia) with the question papers and solution sheets side by side. Select the course and change the year of the exam rapidly, to be able to efficiently study.<br>
 <b>Only the source code of this application is published, there are no available releases to install.</b>
+
+<a href="https://apps.microsoft.com/detail/9mx6hrgbg9tg"><img alt="alt_text" width="240px" src="https://get.microsoft.com/images/en-us%20dark.svg" /></a> 
+
 ## Features
  - See the question paper only, the answers or view them both side by side
  - Switch between years and between june or september versions easily
